@@ -1,38 +1,241 @@
-.App {
-  text-align: center;
+.app {
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+    display: inline-block;
+    color: #CCCCD3;
+    font-size: 32px;
+    padding: 40px 30px 15px 30px;
+    border-bottom: 1px solid #CCCCD3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box-wrapper {
+    margin: 40px auto 0 auto;
+    border: 2px dashed  #fff;
+    position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(45deg, #3023AE 0%, #f09 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.form label {
+    font-size: 20px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.form textarea {
+    padding: 16px 13px;
+    width: 360px;
+    border: none;
+    outline: none;
+    background-color: #ccc;
+    resize: none;
+    height: 50px;
+    color: #000;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.button {
+    padding: 17px 20px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #f09;
+    transition: all .3s ease-in;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.button:hover {
+    background: #3023AE;
+}
+
+.copied {
+    position: absolute;
+    top: 30%;
+    background-color: #F6CEEC;
+    padding: 20px 30px;
+    color: #433A5A;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+}
+
+.copied p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.rangeInput_1 {
+    position: absolute;
+    top: 16px;
+    left: 0;
+}
+
+.rangeInput_2 {
+    position: absolute;
+    bottom: 50%;
+    right: 45%;
+    transform: rotate(-90deg);
+}
+
+.rangeInput_3 {
+    position: absolute;
+    bottom: 50%;
+    right: -55%;
+    transform: rotate(-90deg);
+}
+
+.rangeInput_4 {
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    background: transparent;
+    border-color: transparent ;
+    color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #002;
+    transition: all 0.3s ease-out;
+    will-change: box-shadow;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -28px;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background: #0ff;
+    box-shadow: 0 0 0 4px #FFF;
+    border: 2px solid #002
+}
+
+.change-control {
+    margin-top: 10px;
+    background: #A1006E;
+    color: #fff;
+    padding: 7px 13px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.change-control:hover {
+    background: #730050;
+}
+
+.link {
+    padding: 20px 10px;
+    text-decoration: none;
+    color: #780c7e;
+}
+
+@media screen and (max-width: 700px){
+    .title {
+        font-size: 28px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form label {
+        margin-bottom: 10px;
+    }
+
+    .form textarea {
+        margin-bottom: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .box {
+        width: 310px;
+        height: 310px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .box {
+        width: 250px;
+        height: 250px;
+    }
+
+    .title {
+        font-size: 23px;
+    }
+
+    .form textarea {
+        width: 300px;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 330px){
+    .box {
+        width: 230px;
+        height: 230px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .form textarea {
+        width: 250px;
+        font-size: 12px;
+    }
 }
